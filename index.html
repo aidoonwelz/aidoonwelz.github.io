@@ -3,214 +3,168 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aidan Welz — Web & Growth for Founder-Led Brands</title>
-<meta name="description" content="Aidan Welz (KinForge) — I build launch-grade websites and the full-funnel growth engine behind them for founder-led brands. Recent work: the Gryphon Atlas Wi-Fi 7 launch.">
-<meta property="og:title" content="Aidan Welz — Web & Growth for Founder-Led Brands">
-<meta property="og:description" content="Launch-grade websites + full-funnel growth (site, ads, email), built by one operator. Recent work: the Gryphon Atlas Wi-Fi 7 launch.">
+<title>Aidan Welz — Web Developer & Digital Launches</title>
+<meta name="description" content="Aidan Welz — web developer specializing in website builds and full-funnel product launches for consumer brands. Recent work: the Gryphon Atlas Wi-Fi 7 launch.">
+<meta property="og:title" content="Aidan Welz — Web Developer & Digital Launches">
+<meta property="og:description" content="Website builds and full-funnel product launches for consumer brands. Recent work: the Gryphon Atlas Wi-Fi 7 launch.">
 <meta property="og:image" content="assets/gryphon-casestudy-web.png">
-<meta name="theme-color" content="#090d16">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
-    --ink:#090d16; --ink2:#0c1220; --panel:#111a2b; --panel2:#0e1626;
-    --paper:#f4f1ea; --muted:#8b94a6; --muted2:#6c7688;
-    --brass:#c9a24b; --brass-dim:#a9863b; --blue:#3776c4;
-    --line:rgba(244,241,234,.10); --line2:rgba(244,241,234,.06);
+    --bg:#ffffff; --bg2:#f7f8fa; --ink:#16181d; --body:#4a515c; --soft:#767e8a;
+    --line:#e6e8ec; --line2:#eef0f3; --accent:#1f56b8; --accent-ink:#123a86;
   }
   html{scroll-behavior:smooth}
-  body{
-    font-family:"Inter",system-ui,-apple-system,sans-serif;
-    color:var(--paper); background:var(--ink);
-    -webkit-font-smoothing:antialiased; line-height:1.5; overflow-x:hidden;
-  }
-  body::before{
-    content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
-    background:
-      radial-gradient(120% 80% at 85% -5%, #16233b 0%, rgba(22,35,59,0) 52%),
-      radial-gradient(90% 60% at 8% 110%, #12192b 0%, rgba(18,25,43,0) 55%),
-      linear-gradient(170deg, #0b1120 0%, #080c14 100%);
-  }
+  body{font-family:"Inter",system-ui,-apple-system,sans-serif;color:var(--body);
+    background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6;font-size:16px}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-  .serif{font-family:"Fraunces",Georgia,serif}
-  .eyebrow{
-    font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;
-    color:var(--brass);display:inline-flex;align-items:center;gap:13px;
-  }
-  .eyebrow::before{content:"";width:30px;height:1px;background:var(--brass);opacity:.8}
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600;
-    padding:13px 24px;border-radius:100px;transition:.25s ease;letter-spacing:.01em;
-  }
-  .btn-primary{background:var(--brass);color:#1a1206;box-shadow:0 12px 30px -10px rgba(201,162,75,.5)}
-  .btn-primary:hover{background:#d8b45f;transform:translateY(-2px)}
-  .btn-ghost{border:1px solid var(--line);color:#d8d3c6}
-  .btn-ghost:hover{border-color:rgba(201,162,75,.5);color:var(--paper)}
-  :focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 32px}
+  h1,h2,h3,h4{color:var(--ink);font-weight:600;letter-spacing:-.02em;line-height:1.15}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;
+    padding:12px 22px;border-radius:8px;transition:.18s ease}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-ink)}
+  .btn-outline{border:1px solid var(--line);color:var(--ink)}
+  .btn-outline:hover{border-color:#c7ccd3;background:var(--bg2)}
+  .link{color:var(--accent);font-weight:600}
+  .link:hover{text-decoration:underline}
 
   /* nav */
-  nav{position:fixed;top:0;inset-inline:0;z-index:50;backdrop-filter:blur(16px);
-    background:rgba(9,13,22,.72);border-bottom:1px solid var(--line2)}
-  nav .wrap{height:66px;display:flex;align-items:center;justify-content:space-between}
-  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:20px;letter-spacing:.01em}
-  .brand b{color:var(--blue);font-weight:600}
-  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:500;
-    letter-spacing:.04em;color:var(--muted)}
-  .navlinks a{text-transform:uppercase;transition:.2s}
-  .navlinks a:hover{color:var(--paper)}
-  .navlinks .cta{color:var(--brass)}
-  @media(max-width:640px){.navlinks a:not(.cta){display:none}}
+  nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.86);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between}
+  .name{font-weight:700;font-size:16px;color:var(--ink);letter-spacing:-.01em}
+  .navlinks{display:flex;gap:28px;font-size:14.5px;font-weight:500;color:var(--soft)}
+  .navlinks a:hover{color:var(--ink)}
+  @media(max-width:560px){.navlinks a:not(.nav-cta){display:none}}
+  .nav-cta{color:var(--accent);font-weight:600}
 
   /* hero */
-  header{padding:150px 0 90px;position:relative}
-  .avail{font-size:13px;color:var(--muted);margin-top:26px;display:flex;align-items:center;gap:9px}
-  .avail::before{content:"";width:8px;height:8px;border-radius:50%;background:#5fbf7a;
-    box-shadow:0 0 0 4px rgba(95,191,122,.16)}
-  h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(42px,7.2vw,86px);
-    line-height:.98;letter-spacing:-.02em;margin-top:22px;max-width:16ch}
-  h1 em{font-style:italic;font-weight:400;color:var(--brass)}
-  .lede{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:60ch;margin-top:28px;line-height:1.6}
-  .lede b{color:#d8d3c6;font-weight:500}
-  .cta-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:38px}
-  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:40px;max-width:640px}
-  .chip{font-size:12.5px;color:#cdd3de;border:1px solid var(--line);border-radius:100px;
-    padding:7px 14px;background:rgba(255,255,255,.02)}
+  header{padding:96px 0 72px;border-bottom:1px solid var(--line2)}
+  .role{font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.02em;margin-bottom:20px}
+  h1{font-size:clamp(34px,5.2vw,52px);max-width:20ch}
+  header p{font-size:clamp(17px,2.1vw,20px);color:var(--body);max-width:60ch;margin-top:24px;line-height:1.55}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+  .meta{margin-top:34px;font-size:14.5px;color:var(--soft)}
+  .meta b{color:var(--ink);font-weight:600}
 
-  /* section shell */
-  section{padding:80px 0;position:relative}
-  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
-    flex-wrap:wrap;margin-bottom:44px}
-  .sec-head h2{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(28px,4vw,40px);
-    letter-spacing:-.015em}
-  .sec-head p{color:var(--muted2);font-size:15px;max-width:34ch}
+  /* section */
+  section{padding:76px 0}
+  .kicker{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.08em;
+    text-transform:uppercase;margin-bottom:14px}
+  .sec-title{font-size:clamp(26px,3.6vw,34px)}
+  .sec-intro{color:var(--soft);font-size:16px;margin-top:12px;max-width:56ch}
 
   /* featured */
-  .featured{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);
-    background:linear-gradient(180deg,rgba(255,255,255,.018),transparent)}
-  .feat-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:center}
-  @media(max-width:860px){.feat-grid{grid-template-columns:1fr;gap:34px}}
-  .feat-copy .eyebrow{margin-bottom:22px}
-  .feat-copy h3{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(30px,4.4vw,46px);
-    line-height:1.02;letter-spacing:-.02em}
-  .feat-copy .role{color:var(--brass);font-family:"Fraunces",serif;font-style:italic;
-    font-size:19px;margin-top:12px}
-  .feat-copy p{color:var(--muted);font-size:15.5px;line-height:1.65;margin-top:20px;max-width:46ch}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-  .tag{font-size:12px;color:#b9c0cd;border:1px solid var(--line);border-radius:6px;
-    padding:5px 11px;letter-spacing:.02em}
-  .feat-copy .cta-row{margin-top:30px}
-  .shot{position:relative;border-radius:12px;overflow:hidden;
-    box-shadow:0 40px 90px -34px rgba(0,0,0,.8),0 0 0 1px var(--line);}
-  .shot img{display:block;width:100%;height:auto}
-  .shot .cnr{position:absolute;width:16px;height:16px;border:1.5px solid var(--brass);opacity:.7;z-index:2}
-  .shot .cnr.tl{top:12px;left:12px;border-right:0;border-bottom:0}
-  .shot .cnr.br{bottom:12px;right:12px;border-left:0;border-top:0}
+  .featured{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .feat-img{margin:34px 0 40px;border:1px solid var(--line);border-radius:12px;overflow:hidden;
+    box-shadow:0 22px 50px -28px rgba(20,30,55,.35)}
+  .feat-img img{display:block;width:100%;height:auto}
+  .feat-body{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+  @media(max-width:760px){.feat-body{grid-template-columns:1fr;gap:32px}}
+  .feat-body h3{font-size:20px;margin-bottom:14px}
+  .feat-body p{margin-bottom:16px}
+  .deliver{list-style:none}
+  .deliver li{padding:13px 0;border-top:1px solid var(--line);color:var(--ink);font-size:15px;font-weight:500}
+  .deliver li:first-child{border-top:0}
+  .deliver li span{display:block;color:var(--soft);font-size:13.5px;font-weight:400;margin-top:3px}
+  .spec{font-size:14px;color:var(--soft);margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+  .spec b{color:var(--ink);font-weight:600}
+  .feat-actions{margin-top:30px}
 
-  /* work grid */
-  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-  @media(max-width:720px){.work-grid{grid-template-columns:1fr}}
-  .card{border:1px solid var(--line);border-radius:14px;padding:30px;
-    background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.008));
-    transition:.3s ease;position:relative;overflow:hidden}
-  .card:hover{transform:translateY(-4px);border-color:rgba(201,162,75,.32)}
-  .card .kicker{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--brass-dim);display:flex;align-items:center;justify-content:space-between}
-  .card .kicker .live{color:#5fbf7a;letter-spacing:.1em}
-  .card h4{font-family:"Fraunces",serif;font-weight:500;font-size:23px;margin-top:16px;letter-spacing:-.01em}
-  .card p{color:var(--muted);font-size:14.5px;line-height:1.62;margin-top:11px}
-  .card .tags{margin-top:18px}
+  /* work list */
+  .work{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:40px}
+  @media(max-width:680px){.work{grid-template-columns:1fr}}
+  .item{padding:28px 0;border-top:1px solid var(--line)}
+  .item h4{font-size:19px;margin-bottom:4px}
+  .item .cat{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:10px}
+  .item p{font-size:15px;color:var(--body);line-height:1.55}
+  .item .stack{font-size:13px;color:var(--soft);margin-top:12px}
 
   /* capabilities */
-  .caps{border-top:1px solid var(--line2);background:linear-gradient(180deg,rgba(255,255,255,.015),transparent)}
-  .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-  @media(max-width:720px){.cap-grid{grid-template-columns:1fr;gap:32px}}
-  .cap h5{font-family:"Fraunces",serif;font-weight:500;font-size:21px;margin-bottom:6px}
-  .cap .sub{color:var(--brass-dim);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-    font-weight:600;margin-bottom:16px}
-  .cap ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-  .cap li{color:var(--muted);font-size:14.5px;padding-left:18px;position:relative}
-  .cap li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;
-    border-radius:50%;background:var(--brass);opacity:.65}
+  .caps{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:40px}
+  @media(max-width:680px){.cap-grid{grid-template-columns:1fr;gap:32px}}
+  .cap h4{font-size:17px;margin-bottom:14px}
+  .cap ul{list-style:none}
+  .cap li{font-size:15px;color:var(--body);padding:7px 0;border-top:1px solid var(--line2)}
+  .cap li:first-child{border-top:0}
 
   /* contact */
-  .contact{text-align:center;padding:110px 0}
-  .contact h2{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(32px,5.5vw,58px);
-    letter-spacing:-.02em;line-height:1.02}
-  .contact h2 em{font-style:italic;color:var(--brass)}
-  .contact p{color:var(--muted);margin-top:22px;font-size:16px}
-  .contact .cta-row{justify-content:center;margin-top:38px}
+  .contact{text-align:center;padding:92px 0}
+  .contact h2{font-size:clamp(28px,4vw,40px)}
+  .contact p{margin-top:16px;color:var(--soft);font-size:17px}
+  .contact .hero-cta{justify-content:center;margin-top:32px}
 
-  footer{border-top:1px solid var(--line2);padding:34px 0}
-  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
-    color:var(--muted2);font-size:13px;align-items:center}
-  footer .brand{font-size:16px}
-
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
-  .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    .reveal{opacity:1;transform:none;transition:none}
-    .btn:hover,.card:hover{transform:none}
-  }
+  footer{border-top:1px solid var(--line);padding:30px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:14px;color:var(--soft)}
+  footer .name{color:var(--ink)}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top">Aidan Welz</a>
+    <a class="name" href="#top">Aidan Welz</a>
     <div class="navlinks">
-      <a href="#featured">Work</a>
+      <a href="#gryphon">Featured</a>
+      <a href="#work">Work</a>
       <a href="#capabilities">Capabilities</a>
-      <a href="mailto:aidoonwelz@gmail.com" class="cta">Get in touch →</a>
+      <a href="mailto:aidoonwelz@gmail.com" class="nav-cta">Contact</a>
     </div>
   </div>
 </nav>
 
 <header id="top">
   <div class="wrap">
-    <span class="eyebrow reveal">KinForge — Independent Web &amp; Growth Studio</span>
-    <h1 class="reveal">I build launch-grade websites and the <em>growth engine</em> behind them.</h1>
-    <p class="lede reveal">For founder-led brands who need more than a pretty page. <b>One operator, the whole funnel</b> — the site, the ad campaign, and the email sequence, built to work as one system instead of stitched together by three freelancers.</p>
-    <div class="avail reveal">Available for freelance &amp; contract work — remote or Tampa Bay, FL</div>
-    <div class="cta-row reveal">
-      <a class="btn btn-primary" href="#featured">See the work →</a>
-      <a class="btn btn-ghost" href="mailto:aidoonwelz@gmail.com">aidoonwelz@gmail.com</a>
+    <div class="role">Web Developer &amp; Digital Launch Specialist</div>
+    <h1>I build websites and product launches for consumer brands.</h1>
+    <p>I design, build, and launch high-converting websites and full-funnel campaigns — handling the site, the advertising, and the email marketing as one coordinated system. Most recently, I led the end-to-end launch of Gryphon Atlas, a Wi-Fi 7 consumer-hardware product.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#gryphon">View featured project</a>
+      <a class="btn btn-outline" href="mailto:aidoonwelz@gmail.com">aidoonwelz@gmail.com</a>
     </div>
-    <div class="chips reveal">
-      <span class="chip">Next.js / React</span>
-      <span class="chip">Shopify / DTC</span>
-      <span class="chip">Landing &amp; launch pages</span>
-      <span class="chip">Meta ad campaigns</span>
-      <span class="chip">Email / Klaviyo</span>
-      <span class="chip">Supabase</span>
-      <span class="chip">AI &amp; automation</span>
-    </div>
+    <div class="meta">Available for freelance &amp; contract work · Remote or Tampa Bay, FL</div>
   </div>
 </header>
 
-<!-- FEATURED -->
-<section class="featured" id="featured">
-  <div class="wrap feat-grid">
-    <div class="feat-copy">
-      <span class="eyebrow reveal">Featured Launch</span>
-      <h3 class="serif reveal">Gryphon Atlas</h3>
-      <div class="role reveal">Wi-Fi 7 consumer-hardware launch — end to end.</div>
-      <p class="reveal">The full launch for a Wi-Fi 7 AI-security router brand (covered in Forbes &amp; PCMag): a premium product-as-hero pre-order site, a Meta ad campaign, a five-email launch sequence, and a Supabase-backed lead-capture pipeline. The site, the traffic, and the follow-up, built to work as one system.</p>
-      <div class="tags reveal">
-        <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Tailwind</span>
-        <span class="tag">Supabase</span><span class="tag">Meta Ads</span><span class="tag">Email Sequence</span>
-      </div>
-      <div class="cta-row reveal">
-        <a class="btn btn-primary" href="https://atlas.gryphonconnect.com" target="_blank" rel="noopener">View live site →</a>
-      </div>
+<!-- FEATURED: GRYPHON -->
+<section class="featured" id="gryphon">
+  <div class="wrap">
+    <div class="kicker">Featured Project</div>
+    <h2 class="sec-title">Gryphon Atlas — Wi-Fi 7 Product Launch</h2>
+    <p class="sec-intro">The complete pre-order launch for a Wi-Fi 7 AI-security router brand featured in Forbes and PCMag.</p>
+
+    <div class="feat-img">
+      <img src="assets/gryphon-casestudy-web.png" alt="Gryphon Atlas launch — pre-order website, email-capture offer, and launch email" loading="lazy">
     </div>
-    <div class="shot reveal">
-      <span class="cnr tl"></span><span class="cnr br"></span>
-      <img src="assets/gryphon-casestudy-web.png" alt="Gryphon Atlas launch — live pre-order site, email-capture offer, and launch email" loading="lazy">
+
+    <div class="feat-body">
+      <div>
+        <h3>Overview</h3>
+        <p>Gryphon needed more than a landing page — they needed a launch. I owned the entire funnel end to end: the pre-order website that presents the product, the advertising that drives qualified traffic to it, and the email sequence that converts visitors who don't buy on the first visit.</p>
+        <p>Every piece was built to work together as one system, rather than assembled from separate freelancers who never coordinate. The result is a launch where the site, the traffic, and the follow-up reinforce each other.</p>
+        <div class="spec"><b>Built with:</b> Next.js · React · Tailwind CSS · Supabase · Vercel · Meta Ads Manager</div>
+        <div class="feat-actions">
+          <a class="btn btn-primary" href="https://atlas.gryphonconnect.com" target="_blank" rel="noopener">View live site →</a>
+        </div>
+      </div>
+      <div>
+        <h3>What I delivered</h3>
+        <ul class="deliver">
+          <li>Pre-order website<span>Product-as-hero design, product pages, responsive across devices</span></li>
+          <li>Meta advertising campaign<span>Full campaign build and creative for pre-order traffic</span></li>
+          <li>Five-part email sequence<span>Launch and nurture emails to convert captured leads</span></li>
+          <li>Lead-capture pipeline<span>Email-capture offer backed by a Supabase data flow</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -218,40 +172,38 @@
 <!-- SELECTED WORK -->
 <section id="work">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <h2 class="serif">Selected work</h2>
-      <p>Shipped projects for real brands — proof over résumé.</p>
-    </div>
-    <div class="work-grid">
+    <div class="kicker">Selected Work</div>
+    <h2 class="sec-title">Other projects</h2>
+    <p class="sec-intro">Shipped work for real brands across web development, automation, and product.</p>
 
-      <div class="card reveal">
-        <div class="kicker"><span>Web &amp; Product · Next.js</span></div>
+    <div class="work">
+      <div class="item">
+        <div class="cat">Web Development</div>
         <h4>J&amp;J Refrigeration</h4>
-        <p>A premium marketing site for a commercial HVAC &amp; refrigeration company — Next.js build with an LG product shop, an AI chat assistant, and a lead-capture flow. Enterprise polish for an industrial brand.</p>
-        <div class="tags"><span class="tag">Next.js</span><span class="tag">AI Assistant</span><span class="tag">Lead Capture</span></div>
+        <p>A premium marketing website for a commercial HVAC and refrigeration company, with a product shop, an AI chat assistant, and a lead-capture flow.</p>
+        <div class="stack">Next.js · AI assistant · Lead capture</div>
       </div>
 
-      <div class="card reveal">
-        <div class="kicker"><span>Brand Site · Local DTC</span></div>
+      <div class="item">
+        <div class="cat">Brand Website</div>
         <h4>Juice Habit</h4>
-        <p>A clean, conversion-minded brand site for a cold-pressed juice shop — bright, appetite-forward design built to turn local search into walk-ins and online orders.</p>
-        <div class="tags"><span class="tag">Web Design</span><span class="tag">Brand</span><span class="tag">Local SEO</span></div>
+        <p>A clean, conversion-focused brand site for a cold-pressed juice shop, built to turn local search into orders and walk-ins.</p>
+        <div class="stack">Web design · Brand · Local SEO</div>
       </div>
 
-      <div class="card reveal">
-        <div class="kicker"><span>Voice AI · Twilio + ElevenLabs</span></div>
+      <div class="item">
+        <div class="cat">Voice AI</div>
         <h4>Ava — Freight Check-Call Agent</h4>
-        <p>An AI voice agent that places and handles freight-broker check-calls — natural speech via ElevenLabs, telephony via Twilio, logic in Python. Automates a repetitive, high-volume human workflow for a logistics SaaS.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Twilio</span><span class="tag">ElevenLabs</span></div>
+        <p>An AI voice agent that places and handles freight-broker check-calls, automating a repetitive, high-volume workflow for a logistics platform.</p>
+        <div class="stack">Python · Twilio · ElevenLabs</div>
       </div>
 
-      <div class="card reveal">
-        <div class="kicker"><span>Automation + Portal · SaaS</span></div>
+      <div class="item">
+        <div class="cat">Automation &amp; Portal</div>
         <h4>ClaimDV</h4>
-        <p>A diminished-value auto-appraisal engine: automated lead sourcing plus a client portal that turns a manual research process into a repeatable sales system for a growing team.</p>
-        <div class="tags"><span class="tag">Automation</span><span class="tag">Client Portal</span><span class="tag">Supabase</span></div>
+        <p>A diminished-value auto-appraisal engine with automated lead sourcing and a client portal that turns a manual process into a repeatable system.</p>
+        <div class="stack">Automation · Client portal · Supabase</div>
       </div>
-
     </div>
   </div>
 </section>
@@ -259,41 +211,36 @@
 <!-- CAPABILITIES -->
 <section class="caps" id="capabilities">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <h2 class="serif">What I do</h2>
-      <p>The whole funnel — design, build, and the growth that fills it.</p>
-    </div>
+    <div class="kicker">Capabilities</div>
+    <h2 class="sec-title">What I do</h2>
     <div class="cap-grid">
-      <div class="cap reveal">
-        <div class="sub">Web &amp; Product</div>
-        <h5 class="serif">Design &amp; build</h5>
+      <div class="cap">
+        <h4>Web Development</h4>
         <ul>
-          <li>Next.js · React · Tailwind</li>
-          <li>Shopify / DTC storefronts</li>
+          <li>Next.js, React &amp; Tailwind</li>
+          <li>Shopify &amp; DTC storefronts</li>
           <li>Landing &amp; launch pages</li>
-          <li>Supabase · Postgres · APIs</li>
+          <li>Supabase, Postgres &amp; APIs</li>
           <li>Responsive, fast, SEO-minded</li>
         </ul>
       </div>
-      <div class="cap reveal">
-        <div class="sub">Growth &amp; Launch</div>
-        <h5 class="serif">Fill the funnel</h5>
+      <div class="cap">
+        <h4>Growth &amp; Launch</h4>
         <ul>
-          <li>Meta ad campaigns</li>
-          <li>Email / Klaviyo sequences</li>
+          <li>Meta advertising campaigns</li>
+          <li>Email &amp; Klaviyo sequences</li>
           <li>Pre-order &amp; lead capture</li>
           <li>Conversion optimization</li>
-          <li>Full product launches</li>
+          <li>End-to-end product launches</li>
         </ul>
       </div>
-      <div class="cap reveal">
-        <div class="sub">AI &amp; Automation</div>
-        <h5 class="serif">Do it faster</h5>
+      <div class="cap">
+        <h4>AI &amp; Automation</h4>
         <ul>
           <li>Claude API agents &amp; tools</li>
-          <li>Voice AI — Twilio, ElevenLabs</li>
-          <li>Scraping &amp; enrichment (Apify)</li>
-          <li>Workflow automation (n8n)</li>
+          <li>Voice AI (Twilio, ElevenLabs)</li>
+          <li>Data scraping &amp; enrichment</li>
+          <li>Workflow automation</li>
           <li>Custom integrations</li>
         </ul>
       </div>
@@ -304,31 +251,21 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <span class="eyebrow reveal" style="justify-content:center;display:flex">Let's talk</span>
-    <h2 class="serif reveal" style="margin-top:22px">Got a product that deserves<br>a <em>real launch?</em></h2>
-    <p class="reveal">Freelance &amp; contract projects — from a single launch page to the whole growth engine.</p>
-    <div class="cta-row reveal">
+    <h2>Let's work together</h2>
+    <p>Available for freelance and contract projects — from a single website to a full product launch.</p>
+    <div class="hero-cta">
       <a class="btn btn-primary" href="mailto:aidoonwelz@gmail.com">aidoonwelz@gmail.com</a>
-      <a class="btn btn-ghost" href="https://atlas.gryphonconnect.com" target="_blank" rel="noopener">See the Gryphon launch →</a>
+      <a class="btn btn-outline" href="https://atlas.gryphonconnect.com" target="_blank" rel="noopener">View the Gryphon launch →</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span class="brand serif">Aidan Welz <b>· KinForge</b></span>
-    <span>Web &amp; growth for founder-led brands · Tampa Bay, FL</span>
+    <span class="name">Aidan Welz</span>
+    <span>Web Developer &amp; Digital Launch Specialist · Tampa Bay, FL</span>
   </div>
 </footer>
 
-<script>
-  const io = new IntersectionObserver((es)=>es.forEach(e=>{
-    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
-  }),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{
-    el.style.transitionDelay=(Math.min(i%6,5)*0.05)+'s';
-    io.observe(el);
-  });
-</script>
 </body>
 </html>
